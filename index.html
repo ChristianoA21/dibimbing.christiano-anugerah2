@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+    section {
+      height: 300vh;
+      background: url(img1.png);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* ============ layer */
+    .layer h1,
+    h2 {
+      text-transform: uppercase;
+    }
+
+    .layer h2 {
+      font-weight: 200;
+      font-size: 2em;
+    }
+
+    .layer h1 {
+      line-height: 1;
+      font-size: 12em;
+      font-weight: 900;
+      background-image: url(https://eskipaper.com/images/3d-wallpaper-hd-1.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .layer {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10%;
+    }
+
+    /* ============ section 2 */
+    section.section2 {
+      height: 200vh;
+      padding: 10%;
+      color: white;
+      background: url(https://wallpaper-house.com/data/out/4/wallpaper2you_39305.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .section2 h1 {
+      font-size: 40px;
+      color: white;
+      padding-bottom: 30px;
+      text-transform: none;
+    }
+
+    .wrapper {
+      position: relative;
+      border-radius: 20px;
+      padding: 3%;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      background-color: #ffffff70;
+    }
+
+    .wrapper .card {
+      color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #ffffffc3;
+    }
+
+    .wrapper .card img {
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .wrapper .card:hover img {
+      transform: scale(0.95);
+    }
+
+    /* ============ section 3 */
+    .section3 {
+      padding: 10%;
+      height: 70vh;
+    }
+
+    .section3 h1 {
+      font-size: 2em;
+      padding-bottom: 20px;
+      color: white;
+    }
+
+    .section3 .wrapper p {
+      color: #111;
+    }
+
+    .mapouter {
+      position: relative;
+      text-align: right;
+      width: 600px;
+      height: 400px;
+    }
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      width: 600px;
+      height: 400px;
+    }
+    .gmap_iframe {
+      width: 600px !important;
+      height: 400px !important;
+    }
+
+  </style>
+  <body>
+    <section></section>
+    <div class="layer">
+      <h2>Hello <br />i'am Christiano</h2>
+      <h1>Frontend <br />Developer</h1>
+    </div>
+
+    <section class="section2">
+      <h1>My Projects</h1>
+      <div class="wrapper">
+        <a class="card" href="https://dibimbing-christiano-anugerahecommerce-christianoa21s-projects.vercel.app/">
+          <img src="./Onglen1.png" alt="" />
+          <p>Project 1</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section3">
+      <h1>Contact Us</h1>
+
+      <div class="wrapper">
+        <div>
+          <h2>Hello I'am Christiano</h2>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+            impedit a perspiciatis veritatis ducimus error ab nihil. Distinctio
+            esse repellat dignissimos. Molestiae et omnis sed minus pariatur,
+            quasi at exercitationem!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+            impedit a perspiciatis veritatis ducimus error ab nihil. Distinctio
+            esse repellat dignissimos. Molestiae et omnis sed minus pariatur,
+            quasi at exercitationem!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+            impedit a perspiciatis veritatis ducimus error ab nihil. Distinctio
+            esse repellat dignissimos. Molestiae et omnis sed minus pariatur,
+            quasi at exercitationem!
+          </p>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              class="gmap_iframe"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=monas &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe
+            ><a href="https://strandsgame.net/">Strands Game</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let layer = document.querySelector(".layer");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        layer.style.left = value + "px"; //70px
+      });
+    </script>
+  </body>
+</html>
